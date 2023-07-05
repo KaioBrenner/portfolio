@@ -3,13 +3,18 @@ import { BsLinkedin, BsGithub, BsInstagram, BsTwitch } from "react-icons/bs";
 import { SiProtonmail } from "react-icons/si";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../App.css";
+import { RiCloseLine } from "react-icons/ri";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 import gericht from "../assets/img/gericht.png";
 import gpt3 from "../assets/img/gpt3.png";
 import hoobank from "../assets/img/hoobank.png";
 import kratosPetshop from "../assets/img/kratospetshop.png";
+import { useState } from "react";
 
 const Home = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
     <div>
       <header class="header">
@@ -48,37 +53,41 @@ const Home = () => {
               </li>
             </ul>
             <div class="header__main-ham-menu-cont">
-              <img
-                src="./assets/svg/ham-menu.svg"
-                alt="hamburger menu"
-                class="header__main-ham-menu"
-              />
-              <img
-                src="./assets/svg/ham-menu-close.svg"
-                alt="hamburger menu close"
-                class="header__main-ham-menu-close d-none"
-              />
+              <div
+                onClick={() => {
+                  setToggleMenu(!toggleMenu);
+                  console.log(toggleMenu);
+                }}
+              >
+                {toggleMenu ? (
+                  <RiCloseLine className="text-5xl"></RiCloseLine>
+                ) : (
+                  <RxHamburgerMenu className="text-5xl"></RxHamburgerMenu>
+                )}
+              </div>
             </div>
           </div>
         </div>
-        <div class="header__sm-menu">
-          <div class="header__sm-menu-content">
-            <ul class="header__sm-menu-links">
-              <li class="header__sm-menu-link">
-                <a href="./index.html"> Home </a>
-              </li>
-              <li class="header__sm-menu-link">
-                <a href="./index.html#about"> Sobre </a>
-              </li>
-              <li class="header__sm-menu-link">
-                <a href="./index.html#projects"> Projetos </a>
-              </li>
-              <li class="header__sm-menu-link">
-                <a href="./index.html#contact"> Contato </a>
-              </li>
-            </ul>
+        {toggleMenu && (
+          <div className="header__sm-menu header__sm-menu--active">
+            <div class="header__sm-menu-content">
+              <ul class="header__sm-menu-links">
+                <li class="header__sm-menu-link">
+                  <a href="#"> Home </a>
+                </li>
+                <li class="header__sm-menu-link">
+                  <a href="#about"> Sobre </a>
+                </li>
+                <li class="header__sm-menu-link">
+                  <a href="#projects"> Projetos </a>
+                </li>
+                <li class="header__sm-menu-link">
+                  <a href="#contact"> Contato </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        )}
       </header>
       <section class="home-hero">
         <div class="home-hero__content">
@@ -368,8 +377,8 @@ const Home = () => {
               action="https://api.staticforms.xyz/submit"
               class="contact__form"
               onSubmit={() => {
-                  alert("Email enviado com sucesso, em breve eu te responderei!")
-                }}
+                alert("Email enviado com sucesso, em breve eu te responderei!");
+              }}
               method="post"
             >
               <div class="contact__form-field">
@@ -412,10 +421,7 @@ const Home = () => {
                   id="message"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                class="btn btn--theme contact__btn"
-              >
+              <button type="submit" class="btn btn--theme contact__btn">
                 ENVIAR
               </button>
               <input
@@ -423,7 +429,11 @@ const Home = () => {
                 name="accessKey"
                 value="e8b5a988-6b92-4b06-8d9d-f6abec8e53e0"
               ></input>
-              <input type="hidden" name="redirectTo" value="https://kaiobrenner.github.io/portfolio"></input>
+              <input
+                type="hidden"
+                name="redirectTo"
+                value="https://kaiobrenner.github.io/portfolio"
+              ></input>
             </form>
           </div>
         </div>
@@ -481,9 +491,8 @@ const Home = () => {
             <div class="main-footer__row main-footer__row-2">
               <h4 class="heading heading-sm text-lt">Kaio Brenner</h4>
               <p class="main-footer__short-desc">
-              Programador Web focado no
-              Frontend e determinado em desenvolver sistemas de
-              alta qualidade
+                Programador Web focado no Frontend e determinado em desenvolver
+                sistemas de alta qualidade
               </p>
             </div>
           </div>
@@ -499,7 +508,7 @@ const Home = () => {
           </div>
         </div>
       </footer>
-      <script src="./index.js"></script>
+      <script src="../index.js"></script>
     </div>
   );
 };
