@@ -428,7 +428,7 @@ const Home = () => {
               <input
                 type="hidden"
                 name="redirectTo"
-                value="https://kaiobrenner.github.io"
+                value="https://kaiobrenner.vercel.app/"
               ></input>
             </form>
           </div>
