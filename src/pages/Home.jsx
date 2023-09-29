@@ -163,9 +163,9 @@ const Home = () => {
               <h3 class="about__content-title">Conheça-me!</h3>
               <div class="about__content-details">
                 <p class="about__content-details-para">
-                  Sou um programador <strong>Front-end</strong> e possuo
+                  Sou um <strong>programdor web</strong> e possuo
                   experiência no desenvolvimento de
-                  <strong> aplicações web</strong> e estou em busca da minha
+                  <strong> aplicações fullstack</strong> e estou em busca da minha
                   primeira oportunidade como desenvolvedor.
                 </p>
                 {/* <p class="about__content-details-para">
