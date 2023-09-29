@@ -6,10 +6,9 @@ import "../App.css";
 import { RiCloseLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 
+import threads from "../assets/img/threads.png";
+import carShowcase from "../assets/img/car-showcase.png";
 import gericht from "../assets/img/gericht.png";
-import gpt3 from "../assets/img/gpt3.png";
-import hoobank from "../assets/img/hoobank.png";
-import kratosPetshop from "../assets/img/kratospetshop.png";
 import promptopia from "../assets/img/promptopia.png";
 import { useState } from "react";
 
@@ -193,6 +192,7 @@ const Home = () => {
               <div class="skills">
                 <div class="skills__skill">React</div>
                 <div class="skills__skill">Next.js</div>
+                <div class="skills__skill">TypeScript</div>
                 <div class="skills__skill">MongoDB</div>
                 <div class="skills__skill">OAuth</div>
                 <div class="skills__skill">Node.js</div>
@@ -222,6 +222,77 @@ const Home = () => {
             </span>
           </h2>
           <div class="projects__content">
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img
+                  src={threads}
+                  className="h-max"
+                  alt="Software Screenshot"
+                  class="projects__row-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title">Threads</h3>
+                <p class="projects__row-content-desc">
+                  No Threads é possível você criar seus threads e ter
+                  comentários neles, criar sua conta, fazer login nela e
+                  personalizá-la, criar comunidades e interagir nelas.
+                </p>
+                <div className="flex flex-wrap">
+                  <div class="skills__skill">React</div>
+                  <div class="skills__skill">Next.js</div>
+                  <div class="skills__skill">MongoDB</div>
+                  <div class="skills__skill">Clerk Auth</div>
+                  <div class="skills__skill">TypeScript</div>
+                  <div class="skills__skill">TailwindCSS</div>
+                  <div class="skills__skill">HTML5</div>
+                  <div class="skills__skill">CSS3</div>
+                </div>
+                <a
+                  class="btn btn--theme dynamicBgClr py-6 px-12 text-2xl"
+                  href="https://threads-kaiobrenner.vercel.app/"
+                  target="_blank"
+                >
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img
+                  src={carShowcase}
+                  className="h-max"
+                  alt="Software Screenshot"
+                  class="projects__row-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title">Car Hub</h3>
+                <p class="projects__row-content-desc">
+                  O Car hub é uma plataforma voltada para o aluguel de carros
+                  que reúne informações detalhadas sobre uma ampla variedade de
+                  veículos, dos mais recentes modelos
+                </p>
+                <div className="flex flex-wrap">
+                  <div class="skills__skill">React</div>
+                  <div class="skills__skill">Next.js</div>
+                  <div class="skills__skill">TypeScript</div>
+                  <div class="skills__skill">RapidAPI</div>
+                  <div class="skills__skill">TailwindCSS</div>
+                  <div class="skills__skill">HTML5</div>
+                  <div class="skills__skill">CSS3</div>
+                </div>
+                <a
+                  class="btn btn--theme dynamicBgClr py-6 px-12 text-2xl"
+                  href="https://car-showcase-kaiobrenner.vercel.app/"
+                  target="_blank"
+                >
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
             <div class="projects__row">
               <div class="projects__row-img-cont">
                 <img
@@ -285,73 +356,6 @@ const Home = () => {
                   class="btn btn--theme dynamicBgClr py-6 px-12 text-2xl"
                   href="https://kaiobrenner.github.io/gericht-restaurant/"
                   target="_blank"
-                >
-                  Ver Projeto
-                </a>
-              </div>
-            </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                  src={gpt3}
-                  className="h-max"
-                  alt="Software Screenshot"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <h3 class="projects__row-content-title">GPT3</h3>
-                <p class="projects__row-content-desc">
-                  Landing Page feita para mostrar o que é o GPT3
-                </p>
-                <div className="flex flex-wrap">
-                  <div class="skills__skill">HTML5</div>
-                  <div class="skills__skill">CSS3</div>
-                  <div class="skills__skill">JavaScript</div>
-                  <div class="skills__skill">React</div>
-                </div>
-                <a
-                  class="btn btn--theme dynamicBgClr py-6 px-12 text-2xl"
-                  href="https://kaiobrenner.github.io/gpt3/"
-                  target="_blank"
-                >
-                  Ver Projeto
-                </a>
-              </div>
-            </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                  src={kratosPetshop}
-                  className="h-max border border-black projects__row-img"
-                  alt="Software Screenshot"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <h3 class="projects__row-content-title">
-                  Kratos Petshop <br />
-                  (Em desenvolvimento)
-                </h3>
-                <p class="projects__row-content-desc">
-                  Projeto do meu TCC de 06/23 que é focado em gerenciamento de
-                  Petshops especializados em banho e tosa. Com o feedback
-                  bastante positivo dos docentes, eu e minha equipe decidimos
-                  levar em frente o projeto.
-                </p>
-                <div className="flex flex-wrap">
-                  <div class="skills__skill">HTML5</div>
-                  <div class="skills__skill">CSS3</div>
-                  <div class="skills__skill">JavaScript</div>
-                  <div class="skills__skill">React</div>
-                  <div class="skills__skill">Node.js</div>
-                  <div class="skills__skill">TailwindCSS</div>
-                  <div class="skills__skill">MongoDB</div>
-                </div>
-                <a
-                  class="btn dynamicBgClr py-6 px-12 text-2xl cursor-default"
-                  href="#"
                 >
                   Ver Projeto
                 </a>
